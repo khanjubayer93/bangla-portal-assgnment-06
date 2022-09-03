@@ -49,8 +49,8 @@ const displayNews = detail => {
                 <div class="card-body">
                     <h2 class="card-title">${title}</h2>
                     <p>${details.slice(0, 500) + '...'}</p>
-                    <div class="card-actions">
-                        <div class="">
+                    <div class="card-actions flex justify-between">
+                        <div>
                             <div class="pr-2">
                                 <img class="w-10 rounded-full" src="${img}" alt="">
                             </div>
@@ -59,11 +59,11 @@ const displayNews = detail => {
                                 <p>${published_date}</p>
                             </div>
                         </div>
-                        <div class="">
+                        <div>
                             <p><i class="fa-regular fa-eye"></i><span class="font-semibold"> ${total_view}M</span>
                             </p>
                         </div>
-                        <div class="">
+                        <div>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
