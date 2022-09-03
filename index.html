@@ -6,10 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bangla Protal</title>
+    <!-- tailwind css link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesom -->
+    <script src="https://kit.fontawesome.com/ec910b8ffd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header>
+        <section class="container">
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
+                    <a class="normal-case text-xl"><span class="bg-sky-600 p-2 text-white rounded-md">Bangal</span>
+                        Protal</a>
+                </div>
+                <div class="flex-none gap-2">
+                    <div class="form-control">
+                        <span class="btn btn-ghost">Blog</span>
+                    </div>
+                    <div>
+                        <span class="btn btn-ghost">Home</span>
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                                <img src="https://placeimg.com/80/80/people" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="p-4">
+        <section class="p-4 d-flex" id="category-container">
+            <ul class="menu menu-horizontal bg-base-100 rounded-box">
+                <!-- <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+                <li><a>Item 3</a></li> -->
+            </ul>
+        </section>
+        <!-- all news -->
+        <section>
+            <div id="news-feed">
+                <!-- <div class="card card-side bg-base-100 shadow-xl w-full gap-4">
+                    <figure class="p-5"><img src="https://placeimg.com/200/280/arch" alt="Movie"></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">New movie is released!</h2>
+                        <p>Click the button to watch on Jetflix app.</p>
+                        <div class="card-actions">
+                            <div class="flex">
+                                <div class="pr-2">
+                                    <img class="w-10 rounded-full" src="images/writer.jfif" alt="">
+                                </div>
+                                <div>
+                                    <h6 class="font-medium">Jone Coper</h6>
+                                    <p>Jan, 10, 2022</p>
+                                </div>
+                            </div>
+                            <div>
 
+                                <p><i class="fa-regular fa-eye"></i><span class="font-semibold"> 1.5M</span>
+                                </p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div><button class="btn btn-outline btn-info">Lern More</button></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+        </section>
+    </main>
+    <!-- js script -->
+
+    <script src="js/index.js"></script>
 </body>
 
 </html>
