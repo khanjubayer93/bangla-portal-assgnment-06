@@ -27,9 +27,11 @@ const categoryBar = async () => {
 const loadNewsDetails = async (code) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/category/0${code}`);
     const data = await res.json();
-    console.log(data.data);
+    // console.log(data.data);
     displayNews(data.data);
 }
+
+// const newsDetail
 
 const displayNews = detail => {
     const newsFeed = document.getElementById('news-feed');
@@ -68,7 +70,7 @@ const displayNews = detail => {
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <div onclick="loadNewsDetails()"><label for="my-modal-3" class="btn modal-button">show detail</label></div>
+                        <div><label for="my-modal-3" class="btn modal-button">show detail</label></div>
                     </div>
                 </div>
             </div>
