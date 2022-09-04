@@ -27,14 +27,13 @@ const categoryBar = async () => {
 const loadNewsDetails = async (code) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/news/category/0${code}`);
     const data = await res.json();
+    console.log(data.data);
     displayNews(data.data);
 }
 
 const displayNews = detail => {
     const newsFeed = document.getElementById('news-feed');
     newsFeed.innerHTML = '';
-
-
     detail.sort((a, b) => b.total_view - a.total_view);
     detail.forEach(news => {
         const { title, thumbnail_url, details, total_view } = news;
@@ -43,14 +42,13 @@ const displayNews = detail => {
         const newsDiv = document.createElement('div');
         newsDiv.classList.add('news')
         newsDiv.innerHTML = `
-    
     <div id="news-feed" class="card card-side bg-base-100 shadow-xl flex justify-between w-full mb-4">
                 <figure class="p-5 w-1/2"><img src="${thumbnail_url}" alt=""></figure>
                 <div class="card-body">
                     <h2 class="card-title">${title}</h2>
                     <p>${details.slice(0, 500) + '...'}</p>
                     <div class="card-actions flex justify-between">
-                        <div>
+                        <div class="flex">
                             <div class="pr-2">
                                 <img class="w-10 rounded-full" src="${img}" alt="">
                             </div>
@@ -70,7 +68,7 @@ const displayNews = detail => {
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star-half-stroke"></i>
                         </div>
-                        <div class="btn btn-outline btn-info "><button>Lern More</button></div>
+                        <div onclick="loadNewsDetails()"><label for="my-modal-3" class="btn modal-button">show detail</label></div>
                     </div>
                 </div>
             </div>
